@@ -12,24 +12,43 @@
 
 <body>
   <div class="container">
-
     <div class="content">
       <h1 style="color: red;">TIC TAC TOE</h1>
-      <h2>Player 1 - X</h2>
-      <h2>Player 2 - 0</h2>
+      <!-- <h2>Player 1 - X</h2>
+      <h2>Player 2 - 0</h2> -->
       <!-- <h2>Hello bro</h2> -->
-      <div class="mygrid">
-        <h1 id="box1" class="item" onclick="clickBox1(); mark();"></h1>
-        <h1 id="box2" class="item" onclick="clickBox2(); mark();"></h1>
-        <h1 id="box3" class="item" onclick="clickBox3(); mark();"></h1>
-        <h1 id="box4" class="item" onclick="clickBox4(); mark();"></h1>
-        <h1 id="box5" class="item" onclick="clickBox5(); mark();"></h1>
-        <h1 id="box6" class="item" onclick="clickBox6(); mark();"></h1>
-        <h1 id="box7" class="item" onclick="clickBox7(); mark();"></h1>
-        <h1 id="box8" class="item" onclick="clickBox8(); mark();"></h1>
-        <h1 id="box9" class="item" onclick="clickBox9();"></h1>
+      <div class="player-flex">
+        <h1 id="player1name">Player - 1</h1>
+        <div class="mygrid">
+          <h1 id="box1" class="item" onclick="clickBox1(); mark();"></h1>
+          <h1 id="box2" class="item" onclick="clickBox2(); mark();"></h1>
+          <h1 id="box3" class="item" onclick="clickBox3(); mark();"></h1>
+          <h1 id="box4" class="item" onclick="clickBox4(); mark();"></h1>
+          <h1 id="box5" class="item" onclick="clickBox5(); mark();"></h1>
+          <h1 id="box6" class="item" onclick="clickBox6(); mark();"></h1>
+          <h1 id="box7" class="item" onclick="clickBox7(); mark();"></h1>
+          <h1 id="box8" class="item" onclick="clickBox8(); mark();"></h1>
+          <h1 id="box9" class="item" onclick="clickBox9(); mark()"></h1>
+        </div>
+        <h1 id="player2name">Player - 2</h1>
       </div>
-      <button id="resetBtn">Reset </button>
+      <button id="resetBtn">Restart </button>
+    </div>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-content">
+      <button id="btn-pl1">1 - Player</button>
+      <button id="btn-pl2">2 - Player</button>
+      <!-- <span class="close">&times</span> -->
+      <div class="name-form">
+        <div id="input-div1">
+          <label id="label">Player-1 Name :</label><input class="input-name" id="name1" type="text">
+        </div>
+        <div id="input-div2">
+          <label id="label">Player-2 Name :</label><input class="input-name" id="name2" type="text">
+        </div>
+      </div>
+      <input type="button" id="start-btn" value="Start">
     </div>
   </div>
 </body>
